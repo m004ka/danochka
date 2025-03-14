@@ -1,181 +1,171 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поздравление</title>
-    <style>
-        body {
-            font-family: 'Cursive', sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            text-align: center;
-            padding: 50px;
-            color: #fff;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1.5s;
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #ffdd57;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-        }
-        p {
-            font-size: 22px;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            color: #fffbe7;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        li {
-            font-size: 18px;
-            padding: 12px;
-            margin: 5px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 12px;
-            color: #222;
-            transition: transform 0.3s, background 0.3s;
-        }
-        li:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.6);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 400px; /* Adjust width as needed */
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .input-group {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li .task-text {
+      flex: 1;
+    }
+
+    li .completed {
+      text-decoration: line-through;
+      color: #777;
+    }
+
+    li .delete-button {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    li .delete-button:hover {
+      background-color: #c82333;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        padding: 15px;
+      }
+
+      input[type="text"] {
+        padding: 8px;
+      }
+
+      button {
+        padding: 8px 12px;
+      }
+
+      li {
+        padding: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <h1>❤️ С 8 Марта❤️ ДанУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУтия! </h1>
-    <p>Поздравляю тебя с этим чудесным праздником! Пусть каждый день будет наполнен радостью, теплотой и улыбками.
-        Всего самого лучшего желать не могу, так как я у тебя уже есть🙃. Ты самая лучшая девушка. Иногда я конечно задумываюсь, где же я так нагрешил в своей жизни.
-        Но чаще всего я думаю, какую же я Красотку выхватил
-        💕🌷</p><p>
-    Мне, к сожалению наши совместные фотки никто не скидывает, поэтому я тут просто самую красивую девушку выложил</p>
-    <div style="text-align: center;">
-        <img src="https://i.postimg.cc/SKcw9Kh6/2025-03-09-012932410.png" alt="Самая красивая девушка" style="max-width: 50%; height: auto;">
+
+  <div class="container">
+    <h1>My To-Do List</h1>
+
+    <div class="input-group">
+      <input type="text" id="new-task" placeholder="Add a new task...">
+      <button id="add-button">Add</button>
     </div>
 
-
-
-
-
-    <h2>Ты — самая прекрасная:</h2>
-    <ul>
-        <li>красивая</li>
-        <li>умная</li>
-        <li>заботливая</li>
-        <li>привлекательная</li>
-        <li>сексуальная</li>
-        <li>добрая</li>
-        <li>нежная</li>
-        <li>милая</li>
-        <li>очаровательная</li>
-        <li>обворожительная</li>
-        <li>неповторимая</li>
-        <li>неописуемая</li>
-        <li>незабываемая</li>
-        <li>неотразимая</li>
-        <li>шикарная</li>
-        <li>ослепительная</li>
-        <li>страстная</li>
-        <li>недоступная</li>
-        <li>божественная</li>
-        <li>завораживающая</li>
-        <li>ангельская</li>
-        <li>лучезарная</li>
-        <li>сексапильная</li>
-        <li>яркая</li>
-        <li>пушистая</li>
-        <li>обалденная</li>
-        <li>сногсшибательная</li>
-        <li>стройная</li>
-        <li>обольстительная</li>
-        <li>кокетливая</li>
-        <li>утончённая</li>
-        <li>грациозная</li>
-        <li>весёлая</li>
-        <li>энергичная</li>
-        <li>креативная</li>
-        <li>стильная</li>
-        <li>коммуникабельная</li>
-        <li>тактичная</li>
-        <li>любвиобильная</li>
-        <li>романтичная</li>
-        <li>разносторонняя</li>
-        <li>сказочная</li>
-        <li>симпатичная</li>
-        <li>пылкая</li>
-        <li>единственная</li>
-        <li>ласковая</li>
-        <li>сладенькая</li>
-        <li>умопомрачительная</li>
-        <li>желанная</li>
-        <li>непредсказуемая</li>
-        <li>загадочная</li>
-        <li>цветущая</li>
-        <li>безупречная</li>
-        <li>гармоничная</li>
-        <li>отзывчивая</li>
-        <li>совершенная</li>
-        <li>лучшая</li>
-        <li>скромная</li>
-        <li>изысканная</li>
-        <li>шаловливая</li>
-        <li>отпадная</li>
-        <li>искренняя</li>
-        <li>дружелюбная</li>
-        <li>понимающая</li>
-        <li>экстравагантная</li>
-        <li>мечтательная</li>
-        <li>ароматная</li>
-        <li>искромётная</li>
-        <li>чистолюбивая</li>
-        <li>манящая</li>
-        <li>восторженная</li>
-        <li>бескорыстная</li>
-        <li>непосредственная</li>
-        <li>соблазнительная</li>
-        <li>одурманивающая</li>
-        <li>жизнерадостная</li>
-        <li>прелестная</li>
-        <li>улыбчивая</li>
-        <li>застенчивая</li>
-        <li>зажигательная</li>
-        <li>честная</li>
-        <li>возбуждающая</li>
-        <li>чистосердечная</li>
-        <li>игривая</li>
-        <li>обаятельная</li>
-        <li>офигительная</li>
-        <li>целеустремлённая</li>
-        <li>дивная</li>
-        <li>женственная</li>
-        <li>блаженная</li>
-        <li>бесподобная</li>
-        <li>ненаглядная</li>
-        <li>необходимая</li>
-        <li>изумительная</li>
-        <li>трогательная</li>
-        <li>миниатюрная</li>
-        <li>любимая</li>
-        <li>самая-самая</li>
+    <ul id="task-list">
+      <!-- Tasks will be added here dynamically by JavaScript -->
     </ul>
-</div>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById("new-task");
+    const addButton = document.getElementById("add-button");
+    const taskList = document.getElementById("task-list");
+
+    addButton.addEventListener("click", addTask);
+
+    function addTask() {
+      const taskText = taskInput.value.trim(); //Remove white spaces from start and end.
+
+      if (taskText !== "") {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+          <span class="task-text">${taskText}</span>
+          <button class="delete-button">Delete</button>
+        `;
+
+        taskList.appendChild(listItem);
+        taskInput.value = ""; // Clear the input
+        
+        // Delete Task
+        const deleteButton = listItem.querySelector(".delete-button");
+        deleteButton.addEventListener("click", () => {
+          listItem.remove();
+        });
+
+        // Toggle Complete
+        const taskTextSpan = listItem.querySelector(".task-text");
+        taskTextSpan.addEventListener("click", () => {
+          taskTextSpan.classList.toggle("completed");
+        });
+      }
+    }
+  </script>
+
 </body>
 </html>
